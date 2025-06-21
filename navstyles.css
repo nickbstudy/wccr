@@ -1,0 +1,103 @@
+/* Hamburger Menu Styles */
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    margin-left: auto;
+}
+
+/* Individual hamburger lines */
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--col-header-text);
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Position each line */
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 20px;
+}
+
+/* Active state - transform to X */
+.hamburger.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    /* Middle line just fades out, no sliding */
+}
+
+.hamburger.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+/* Mobile Navigation Menu */
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--col-header-bg);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.mobile-nav.active {
+    max-height: 400px;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav li {
+    border-bottom: 1px solid var(--col-header-line);
+}
+
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--col-header-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav a:hover {
+    background-color: var(--col-header-hover);
+}
