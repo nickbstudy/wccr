@@ -9,7 +9,7 @@
     border: none;
     padding: 0;
     outline: none;
-    margin-left: auto;
+    margin-left: 1rem;
 }
 
 /* Individual hamburger lines */
@@ -101,3 +101,4 @@
 .mobile-nav a:hover {
     background-color: var(--col-header-hover);
 }
+

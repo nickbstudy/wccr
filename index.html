@@ -22,22 +22,19 @@
 <body>
     <header>
         <a href="./index.html">
-            <img class="header-logo" src="./images/full-size-logo.png" alt="Waiuku Colony Cat Rescue Logo">
+            <picture>
+                <source srcset="/images/200-logo.webp" type="image/webp">
+                <img class="logo" src="/images/200-logo.png" alt="Waiuku Colony Cat Rescue Logo">
+            </picture>
         </a>
-        <div class="two-line-title">
-            <h4 class="title">Waiuku Colony <br>Cat Rescue</h4>
+        <div class="responsive-title">
+            <h4 class="title">Waiuku Colony <br class="mobile-break">Cat Rescue</h4>
         </div>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
 
-        <!-- Mobile Navigation Menu -->
-        <nav class="mobile-nav quicksand-regular" id="mobileNav">
+        <nav class="desktop-nav" aria-label="Desktop navigation">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100064545318099"><b>Facebook</b></a></li>
+                <li class="selected"><a href="./index.html">About Us/FAQ</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook (Cats for Adoption)</a></li>
                 <li><a href="./history.html">History</a></li>
                 <li><a href="./help-donate.html">How to Help/Donate</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
@@ -45,73 +42,97 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
+        
+        <!-- Mobile Hamburger + Nav -->
+        <button class="hamburger" id="hamburger"
+            aria-expanded="false" 
+            aria-controls="mobileNav" 
+            aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="mobile-nav quicksand-regular" id="mobileNav" aria-label="Mobile navigation">
+            <ul>
+                <li class="selected"><a href="./index.html">About Us / FAQ</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook (Cats for Adoption)</a></li>
+                <li><a href="./history.html">History</a></li>
+                <li><a href="./help-donate.html">How to Help / Donate</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./testimonials.html">Testimonials</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <img class="img-hero" src="./images/hero-mercedes.jpg" alt="Coco and Puff reaching out">
+        <picture>
+            <source srcset="/images/hero-mercedes.webp" type="image/webp">
+            <img class="img-hero" src="/images/hero-mercedes.jpg" alt="Kitten on a chair">
+        </picture>
         <section>
             <h3 class="center">Who we are and what we do</h3>
             <p>
                 We rescue, rehabilitate, and rehome stray and abandoned cats and kittens.  Our work includes desexing, feeding, vet care, fostering, education, and community support. We also care for established cat colonies and respond to urgent welfare cases whenever resources allow. However as we are a small team of volunteers, we can't always help.<br>Please note if you have an urgent case of animal welfare, please contact the SPCA or take the animal to any veterinary clinic.    
             </p>
         </section>
-        <section>
+        <article>
             <h3 class="center">Where are you located?</h3>
             <p>
                 We're based in Waiuku, but because we're entirely run by volunteers, we don't have a central shelter or depot.  All of our cats and kittens are in foster homes across the Franklin Region, being raised in loving family homes until they're adopted.
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">How Are We Funded?</h3>
             <p>
                 Waiuku Colony Cat Rescue doesn't receive any government funding, we're entirely volunteer-run.  Most of our funding comes from grassroots fundraising efforts like raffles, and sausage sizzles, along with the kind generosity of our supporters.  When unexpected vet bills pop up, from unpredictable situations like a badly injured cat or kitten it's the kindness of our supporters that helps us cover the costs and keep going.
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">How can I help or volunteer?</h3>
             <p>
                 There are many ways to help! We're always looking for foster homes, transport help, fundraising support, and volunteers to help feed our colony cats. Even if you can't foster, you might be able to help with admin, events, or odd jobs. Just visit our volunteer page or send us a message, we're always grateful for help! 
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">Where can I drop off donations?</h3>
             <p>
                 Please message us first so we can direct you to the nearest drop-off point, we have a few options depending on where you're located and what you're donating. We're always in need of food, litter, toys, blankets just to name a few things!
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">Can I visit the cats?</h3>
             <p>
                 Unfortunately not, because our cats are in private foster homes, visits are by appointment only. If you're interested in adopting, we can arrange a time for you to meet the cat or kitten in their foster home.
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">How do I adopt a cat or kitten?</h3>
             <p>
-                Just send us a message on Facebook or email <a href="mailto:colonycatswaiuku@gmail.com">colonycatswaiuku@gmail.com</a> with a bit about yourself and the home you'd be offering a kitty. We'll chat with you about your household and help to suggest possible matches. Once everyone's happy, we'll arrange a meet-and-greet with the foster home.
+                Just send us a message on <a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook</a> or email <a href="mailto:colonycatswaiuku@gmail.com">colonycatswaiuku@gmail.com</a> with a bit about yourself and the home you'd be offering a kitty. We'll chat with you about your household and help to suggest possible matches. Once everyone's happy, we'll arrange a meet-and-greet with the foster home.
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">Do you take in surrendered pets?</h3>
             <p>
                 In some cases, yes, but it depends on our current capacity and the circumstances. We prioritise the most urgent and at-risk cats, so please message us with your situation and we'll do our best to help in whatever capacity we can at that time.
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">Are you a registered charity?</h3>
             <p>
                 Yes! Waiuku Colony Cat Rescue is a registered charity in New Zealand.  <a href="https://register.charities.govt.nz/Charity/CC47434">Charity #CC47434</a>
             </p>
-        </section>
-        <section>
+        </article>
+        <article>
             <h3 class="center">Can I make a donation online?</h3>
             <p>
                 Absolutely, yes please and thank you! Visit our donate page for bank details.
             </p>
-        </section>
-        
-        
-
+        </article>
     </main>
+    <footer>
+        See all our cats ready for adoption and latest updates on our <a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook page</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 

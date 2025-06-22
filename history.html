@@ -23,10 +23,13 @@
 <body>
     <header>
         <a href="./index.html">
-            <img class="header-logo" src="./images/full-size-logo.png" alt="Waiuku Colony Cat Rescue Logo">
+            <picture>
+                <source srcset="/images/200-logo.webp" type="image/webp">
+                <img class="header-logo" src="/images/200-logo.png" alt="Waiuku Colony Cat Rescue Logo">
+            </picture>
         </a>
-        <div class="two-line-title">
-            <h4 class="title">Waiuku Colony <br>Cat Rescue</h4>
+        <div class="responsive-title">
+            <h4>Waiuku Colony <br class="mobile-break">Cat Rescue</h4>
         </div>
         <button class="hamburger" id="hamburger">
             <span></span>
@@ -37,10 +40,10 @@
         <!-- Mobile Navigation Menu -->
         <nav class="mobile-nav quicksand-regular" id="mobileNav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100064545318099"><b>Facebook</b></a></li>
+                <li><a href="./index.html">About Us / FAQ</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook (Cats ready for adoption)</a></li>
                 <li><a href="./history.html">History</a></li>
-                <li><a href="./help-donate.html">How to Help/Donate</a></li>
+                <li><a href="./help-donate.html">How to Help / Donate</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
                 <li><a href="./testimonials.html">Testimonials</a></li>
                 <li><a href="./contact.html">Contact</a></li>
@@ -48,52 +51,68 @@
         </nav>
     </header>
     <main>
-        <img class="img-hero" src="./images/hero-mercedes.jpg" alt="Mercedes gazing at you">
-        <section>
-            <h3 class="center">Our History</h3>
+        <section class="text-wrap-section">
+            <figure>
+                <picture>
+                    <source srcset="/images/history-holding.webp" type="image/webp">
+                    <img src="/images/history-holding.jpg" alt="Kitten having a snuggle">
+                </picture>
+                <figcaption>"Cheddar" having a snuggle</figcaption>
+            </figure>
+                <h3>Our History</h3>
             <p>
                 In the early 2000s, long before Waiuku Colony Cat Rescue was officially registered as a charity in 2008,
                 Zoe, our rescue founder was loading her groceries into the car at the old New World carpark when she
                 spotted a cat in a terrible state. It had no tail, was limping, and clearly needed help. As she put out
                 some food, more cats began to appear from the shadows. She started coming back every night to feed them.
             </p>
-
-
-            <p>Not long after, word got out and Zoe was the person to call if you found a cat or kitten that needed
-                help.</p>
-
-            <p>What followed was tough. Rescue is raw, emotional, stressful, and heartbreaking. Some people want to
+            <p>
+                Not long after, word got out and Zoe was the person to call if you found a cat or kitten that needed help.
+            </p>
+            <p>
+                What followed was tough. Rescue is raw, emotional, stressful, and heartbreaking. Some people want to
                 help, others make things harder. Vet bills were constant, usually coming out of Zoe's own pocket. She
                 spent many weekends standing outside the local supermarket, doing sausage sizzle fundraisers just to
-                keep going.</p>
-
-            <p>Over the years, a few special women became an invaluable support to Zoe and the work she was doing. In
+                keep going.
+            </p>
+            <p>
+                Over the years, a few special women became an invaluable support to Zoe and the work she was doing. In
                 2008, a committee was formed, and the rescue was officially registered as a charity, giving Waiuku's
-                colony cats a formal voice and support system.</p>
-
-            <p>In June 2022, Ally found a tiny, angry, starving kitten huddled at her door. That kitten, now named
+                colony cats a formal voice and support system.
+            </p>
+            <p>
+                In June 2022, Ally found a tiny, angry, starving kitten huddled at her door. That kitten, now named
                 Trixie, changed everything. Trixie opened eyes to the harsh reality so many cats face, and from that
-                moment, Ally knew this was her calling.</p>
-
-            <p>Later that year, Ally stepped in to take the reins, allowing Zoe a well-earned break from the day-to-day
-                running of the rescue.</p>
-
-            <p>Today, Waiuku Colony Cat Rescue is powered by a fantastic team of around 20 amazing volunteers, some who
+                moment, Ally knew this was her calling.
+            </p>
+            <p>
+                Later that year, Ally stepped in to take the reins, allowing Zoe a well-earned break from the day-to-day
+                running of the rescue.
+            </p>
+            <p>
+                Today, Waiuku Colony Cat Rescue is powered by a fantastic team of around 20 amazing volunteers, some who
                 feed our colony cats, some who foster, and others who handle the much-needed admin work behind the
-                scenes. Together, we help around 350 cats each year.</p>
-
-            <p>What makes our rescue unique is our roots. Waiuku is a very small remote town. We're part of our
+                scenes. Together, we help around 350 cats each year.
+            </p>
+            <p>
+                What makes our rescue unique is our roots. Waiuku is a very small remote town. We're part of our
                 community. Whether we're in New World or at the bakery, it's not unusual for someone to stop us and say,
-                “We adopted our cat from you!” or to ask for help desexing cats!</p>
-
-            <p>Our goal is to keep to that original plan of desexing, caring for and feeding the colony cats of Waiuku.
+                “We adopted our cat from you!” or to ask for help desexing cats!
+            </p>
+            <p>
+                Our goal is to keep to that original plan of desexing, caring for and feeding the colony cats of Waiuku.
                 As well as saving as many animals as possible, to end the suffering of hungry and sick cats and kittens,
                 and to provide them with vet care, nourishment, and refuge until they can be adopted into loving homes.
             </p>
+            </div>
+            <div class="image-content">
+                
+            </div>
         </section>
-
-
     </main>
+    <footer>
+        See all our cats ready for adoption and latest updates on our <a href="https://www.facebook.com/profile.php?id=100064545318099">Facebook page</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 
