@@ -47,6 +47,7 @@ class ImageGallery {
         this.overlaySource = document.getElementById('overlaySource');
         this.overlayCounter = document.getElementById('overlayCounter');
         this.currentIndex = 0;
+        this.isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
         this.init();
     }
@@ -65,23 +66,42 @@ class ImageGallery {
         // Keyboard navigation
         document.addEventListener('keydown', (e) => this.handleKeyPress(e));
 
-        // Click/tap outside to close (mobile-friendly)
-        this.overlay.addEventListener('click', (e) => {
-            // Close if clicking on overlay background or overlay-content (but not image/controls)
-            if (e.target === this.overlay || e.target.classList.contains('overlay-content')) {
-                this.closeOverlay();
-            }
-        });
-
-        // Touch events for better mobile support
-        this.overlay.addEventListener('touchend', (e) => {
-            if (e.target === this.overlay || e.target.classList.contains('overlay-content')) {
-                this.closeOverlay();
-            }
-        });
+        // Improved mobile-friendly overlay dismissal
+        this.setupOverlayDismissal();
 
         // Prevent right-click context menu on overlay
         this.overlay.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
+
+    setupOverlayDismissal() {
+        // Create a more reliable handler that works on mobile
+        const handleDismiss = (e) => {
+            const target = e.target;
+            
+            // Close if tapping on the overlay background or overlay-content
+            if (target === this.overlay || target.classList.contains('overlay-content')) {
+                this.closeOverlay();
+            }
+        };
+
+        // Use both mousedown and touchstart for immediate response
+        this.overlay.addEventListener('mousedown', handleDismiss);
+        this.overlay.addEventListener('touchstart', handleDismiss, { passive: true });
+        
+        // Alternative approach: make the overlay-content div handle dismissal
+        const overlayContent = this.overlay.querySelector('.overlay-content');
+        if (overlayContent) {
+            overlayContent.addEventListener('mousedown', (e) => {
+                if (e.target === overlayContent) {
+                    this.closeOverlay();
+                }
+            });
+            overlayContent.addEventListener('touchstart', (e) => {
+                if (e.target === overlayContent) {
+                    this.closeOverlay();
+                }
+            }, { passive: true });
+        }
     }
 
     openOverlay(index) {
