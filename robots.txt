@@ -1,0 +1,75 @@
+# Robots.txt for Waiuku Colony Cat Rescue
+# https://waiukucolonycatrescue.org.nz/
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines to crawl everything
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Block common bad bots and scrapers
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Block AI training crawlers (optional - you may want to allow these)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Crawl delay for aggressive crawlers
+User-agent: *
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://waiukucolonycatrescue.org.nz/sitemap.xml

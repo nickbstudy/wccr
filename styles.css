@@ -5,6 +5,7 @@
     --col-header-hover: #7e6d48;
     --col-body-bg: #fffaf5;
     --col-body-text: #1d170e;
+    --col-body-quote-border: #2a231940;
     --col-footer-border: #ffd7ad;
     --col-footer-bg: #ffead4;
     --col-footer-text: #1d170e;
@@ -52,7 +53,7 @@ header {
 
     .responsive-title {
         text-align: center;
-        
+
     }
 
     .mobile-break {
@@ -83,8 +84,9 @@ header {
     .desktop-nav {
         display: none;
         align-items: end;
-        
+
         font-size: 1.125rem;
+
         a {
             color: var(--col-header-text);
             text-decoration: none;
@@ -93,7 +95,7 @@ header {
 
 
         ul {
-            display: flex; 
+            display: flex;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -118,8 +120,13 @@ main {
         text-align: center;
     }
 
-    b, strong {
+    b,
+    strong {
         font-weight: 500;
+    }
+
+    h2 {
+        margin-bottom: 0.75rem;
     }
 
     .gallery-title {
@@ -138,6 +145,45 @@ main {
         padding: 1.5rem 1.5rem 0 1.5rem;
     }
 
+    dl {
+        dt {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        dd {
+            margin-left: 0;
+            margin-bottom: 1rem;
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            .bank-account {
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        }
+    }
+
+    .testimonial {
+        margin: 0.75rem;
+
+        blockquote {
+            p {
+                border-left: 1px solid var(--col-body-quote-border);
+                margin-left: 0.5rem;
+                padding-left: 0.75rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+    }
+
+
     article {
         margin: 0;
         padding: 0.5rem 1.5rem 0 1.5rem;
@@ -151,20 +197,17 @@ main {
         margin-bottom: 0.75rem;
     }
 
-    p {
-        margin-bottom: 1rem;
-    }
-
     .flex-images {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
+
         .img-preview {
             width: 160px;
         }
     }
-    
+
 }
 
 .flex-content {
@@ -214,6 +257,10 @@ footer {
 .text-wrap-section {
     padding: 1rem 1.5rem;
     overflow: hidden;
+
+    p {
+        margin-bottom: 1rem;
+    }
 }
 
 .text-wrap-section::after {
@@ -224,7 +271,8 @@ footer {
 
 .text-wrap-section figure {
     float: right;
-    width: 160px; /* Minimum 180px */
+    width: 160px;
+    /* Minimum 180px */
     margin: 0 0 0.5rem 1rem;
 }
 
@@ -252,23 +300,41 @@ footer {
 
 /* Scale image up at larger viewports */
 @media (min-width: 480px) {
-    .text-wrap-section figure { width: 200px; }
+    .text-wrap-section figure {
+        width: 200px;
+    }
 }
 
 @media (min-width: 600px) {
-    .text-wrap-section figure { 
-        width: 240px; 
-        margin: 0 0 0.5rem 1.5rem; 
+    .text-wrap-section figure {
+        width: 240px;
+        margin: 0 0 0.5rem 1.5rem;
     }
 }
 
 @media (min-width: 768px) {
-    .text-wrap-section figure { width: 300px; }
+    .text-wrap-section figure {
+        width: 300px;
+    }
 
     main {
         h3 {
             font-size: 1.75rem;
         }
+
+        h2 {
+            font-size: 1.875rem;
+        }
+
+        dl {
+            font-size: 1.125rem;
+
+            dt {
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+        }
+
         p {
             font-size: 1.125rem;
         }
@@ -276,9 +342,9 @@ footer {
 }
 
 @media (min-width: 1080px) {
-    .text-wrap-section figure { 
-        width: 400px; 
-        margin: 0 0 0.5rem 2rem; 
+    .text-wrap-section figure {
+        width: 400px;
+        margin: 0 0 0.5rem 2rem;
     }
 
     header {
@@ -287,11 +353,13 @@ footer {
             width: 15rem;
             margin-right: auto;
         }
+
         .mobile-break {
             display: block;
         }
 
-        .hamburger, .mobile-nav {
+        .hamburger,
+        .mobile-nav {
             display: none;
         }
 
@@ -303,6 +371,7 @@ footer {
     main {
         .flex-images {
             justify-content: space-between;
+
             .img-preview {
 
                 width: 230px;
@@ -317,7 +386,9 @@ footer {
 }
 
 @media (min-width: 1200px) {
-    .text-wrap-section figure { width: 460px; }
+    .text-wrap-section figure {
+        width: 460px;
+    }
 }
 
 @media (min-width: 1312px) {
@@ -335,6 +406,7 @@ footer {
         .responsive-title {
             width: auto;
         }
+
         .mobile-break {
             display: none;
         }
