@@ -23,7 +23,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     margin: 0;
-    background-color: #f8f8f8;
+    background-color: #fffaf5;
     color: #201a12;
 }
 
@@ -202,8 +202,8 @@ main {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-evenly;
-
+        justify-content: center;
+        gap: 10px;
         .img-preview {
             width: 160px;
         }
@@ -371,7 +371,7 @@ footer {
 
     main {
         .flex-images {
-            justify-content: space-between;
+            justify-content: center;
 
             .img-preview {
 
