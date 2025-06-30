@@ -172,7 +172,7 @@ main {
             }
 
             .bank-account {
-                font-size: 1.75rem;
+                
                 font-weight: 600;
                 text-align: center;
                 font-family: 'Courier New', Courier, monospace;
@@ -392,6 +392,10 @@ footer {
                 width: 230px;
             }
         }
+
+        .bank-account {
+            font-size: 1.75rem;
+        }
     }
 
     footer {
@@ -404,6 +408,8 @@ footer {
     .text-wrap-section figure {
         width: 460px;
     }
+
+    
 }
 
 @media (min-width: 1312px) {
