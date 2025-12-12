@@ -144,7 +144,7 @@ class ImageGallery {
     handleKeyPress(e) {
         if (!this.overlay.classList.contains('active')) return;
 
-        switch (e.key) {
+        switch (e.key) { 
             case 'Escape':
                 this.closeOverlay();
                 break;
